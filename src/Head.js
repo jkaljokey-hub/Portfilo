@@ -1,74 +1,81 @@
 const Head = () => {
   return (
     <>
-      <div className="p-2 flex items-center justify-between">
+      {/* Header: Profile + Name + Social Icons */}
+      <header className="p-4 flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 rounded-xl shadow-lg">
+        
         {/* Profile Image */}
-        <div>
+        <div className="flex-shrink-0 mb-4 md:mb-0">
           <img
-            alt=""
-            src="unnamed1.png"
-            className="rounded-full h-16 mr-10 lg:h-32 sm:h-16 md:h-24"
+            src="IMG-20251109-WA0020.jpg"
+            alt="Profile of Abubakar Alnour"
+            className="rounded-full h-20 w-20 md:h-32 md:w-32 object-cover border-2 border-sky-500"
           />
         </div>
 
         {/* Name */}
-        <div>
-          <h4 className="text-white text-base sm:text-sm md:text-lg lg:text-2xl">
-            Abubakar alnour
-          </h4>
+        <div className="text-center md:text-left mb-4 md:mb-0">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Abubakar Alnour
+          </h1>
+          <p className="text-gray-300 mt-1 text-sm sm:text-base">Cloud Administrator</p>
         </div>
 
         {/* Social Icons */}
-        <div className="grid grid-cols-4 gap-1">
+        <div className="grid grid-cols-4 gap-4">
           <a
-            href="https://github.com/abubakaralnour"
-            rel="noreferrer"
+            href="https://github.com/jkaljokey-hub"
             target="_blank"
+            rel="noreferrer"
+            className="hover:scale-110 transition-transform"
           >
-            <img alt="" src="git.png" className="rounded-full h-6 md:h-12 lg:h-12" />
+            <img src="git.png" alt="GitHub" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
-
           <a
-            href="https://www.linkedin.com/in/abubakar-alnour-866b54318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            rel="noreferrer"
+            href="https://www.linkedin.com/in/abubakar-alnour"
             target="_blank"
+            rel="noreferrer"
+            className="hover:scale-110 transition-transform"
           >
-            <img alt="" src="linkdn.png" className="rounded-full h-6 md:h-12 lg:h-12" />
+            <img src="linkdn.png" alt="LinkedIn" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
-
-          <a href="mailto:abubakaralnour43@gmail.com">
-            <img alt="" src="gmail.png" className="rounded-full h-6 md:h-12 lg:h-12" />
+          <a
+            href="mailto:abubakaralnour43@gmail.com"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src="gmail.png" alt="Email" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
-
-          <a href="https://wa.me/0544854061" rel="noreferrer" target="_blank">
-            <img alt="" src="whats.png" className="rounded-full h-6 md:h-12 lg:h-12" />
+          <a
+            href="https://wa.me/0539903165"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-110 transition-transform"
+          >
+            <img src="whats.png" alt="WhatsApp" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
-
-          {/* Ping Indicator */}
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full bg-sky-500"></span>
-          </span>
         </div>
-      </div>
+      </header>
 
       {/* Greeting */}
-      <div style={{ textAlign: "center", color: "rgb(194, 191, 182)" }}>
-        <h6>
-          Hello how it's going <span className="dots"></span>
-        </h6>
+      <div className="mt-6 text-center text-gray-300">
+        <h2 className="text-lg sm:text-xl md:text-2xl animate-pulse">
+          Hello, how it's going? <span className="dots">•••</span>
+        </h2>
       </div>
 
       {/* CV Download */}
-      <div className="pl-8 text-sm h-16" id="icon-container">
-        <a href="Abubakar_Front_End_CV.pdf" download="Abubakar_Front_End_CV.pdf">
+      <div className="mt-6 flex justify-center">
+        <a
+          href="abubakarCloud.pdf"
+          download="abubakarCloud.pdf"
+          className="flex items-center gap-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg shadow-md transition"
+        >
           <img
-            alt=""
             src="download (2).png"
-            id="trembling-icon"
-            className="h-4 w-6 md:h-6 md:w-8 lg:h-6 lg:w-8 xl:h-6 xl:w-8 2xl:h-6 2xl:w-8"
+            alt="Download CV"
+            className="h-6 w-6 md:h-8 md:w-8"
           />
-          My cv
+          Download CV
         </a>
       </div>
     </>
