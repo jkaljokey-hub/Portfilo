@@ -1,18 +1,11 @@
-import { Container } from 'react-bootstrap';
 import './App.css';
-import Flowersphoto from './Flowersphoto';
 import Head from './Head';
-import Home from './Home';
-import MovingImage from './photoAlshifa';
-import Photomyflowers from './Photomyflowers';
 import Projecttext from './Projecttext';
 import Text from './Text';
 import TextAlshifa from './TextAlshifa';
 import TextFlowes from './TextFlowes';
 import Textmyflower from './Textmyflower';
 import Texttow from './Texttow';
-import Footer from './Footer';
-
 function App() {
   return (<>
 <div class="  bg-gradient-to-r from-slate-950 from-10% via-slate-820 via-30% to-zinc-600 to-90% ... ">
@@ -28,17 +21,14 @@ function App() {
 <Projecttext/>
 
 <TextAlshifa/>
-<MovingImage/>
 <div className=' mt-10' style={{}}>
 <div className='mb- flex justify-end'>
 <TextFlowes/>
 </div>
-<Flowersphoto />
 </div>
 <div className='flex justify-center mt-16'>
 <Textmyflower/>
 </div>
-<Photomyflowers/>
 </div>
 
 </div>

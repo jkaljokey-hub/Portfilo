@@ -1,7 +1,5 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 const Text = () => {
   const [open, setOpen] = useState(false);
