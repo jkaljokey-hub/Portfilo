@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+  
+  .loading {
+    font-size: 24px;
+  }
+  
+  .dots {
+    display: inline-block;
+    position: relative;
+    width: 1.2em;
+    color: white;
+  }
+  
+  .dots::after {
+    content: '';
+    animation: dotAnimation 1.5s infinite steps(1);
+  }
+  
+  .dots::before {
+    content: '.';
+    animation: dotAnimation 2s infinite steps(1) 0.5s;
+  }
+  
+  @keyframes dotAnimation {
+    0% {
+      content: '';
+    }
+    33% {
+      content: '.';
+    }
+    66% {
+      content: '..';
+    }
+    100%{
+        content: '...';
+    }
+  }
+  
+
+
+
+  /*     for animatee image*/
+  .image-slider-container {
+    position: relative;
+    width: 100%; /* Container takes full width */
+    height: 200px; /* Adjust to image height */
+    overflow: hidden; /* Hide overflow */
+    margin-top: 3rem;
+  }
+  
+  .image-slider {
+    display: flex; /* Display images in a row */
+    position: absolute;
+    width: calc(400px * 5); /* (Image width * number of images) */
+    animation: moveSlider 30s linear infinite; /* Move left to right */
+    padding-right: 5px;
+    gap: 2rem;
+  }
+  
+  .image-slider img {
+    width: 400px; /* Adjust to your image width */
+    height: 300px; /* Adjust to your image height */
+  }
+  
+  /* Keyframes for sliding animation */
+  @keyframes moveSlider {
+    0% {
+      transform: translateX(-100%); /* Start off-screen left */
+    }
+    100% {
+      transform: translateX(100%); /* End off-screen right */
+    }
+  }
+  
+
+
+
+
+
+#ro{
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+rotate: 350deg;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+    #flo{
+        background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+        rotate: 10deg;
+    }
+
+
+
+    
+
+
+      /*     for animatee image SECOND*/
+  .image-slider-container-Second {
+    position: relative;
+    width: 100%; /* Container takes full width */
+    height: 200px; /* Adjust to image height */
+    overflow: hidden; /* Hide overflow */
+    margin-top: 3rem;
+  }
+  
+  .image-slider-Second {
+    display: flex; /* Display images in a row */
+    position: absolute;
+    width: calc(400px * 5); /* (Image width * number of images) */
+    animation: moveSliderSecond 35s linear infinite; /* Move left to right */
+    padding-right: 5px;
+    gap: 2rem;
+  }
+  
+  .image-slider-Second img {
+    width: 400px; /* Adjust to your image width */
+    height: 300px; /* Adjust to your image height */
+  }
+  
+  /* Keyframes for sliding animation */
+  @keyframes moveSliderSecond {
+    0% {
+      transform: translateX(70%); /* Start off-screen rght */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen left */
+    }
+  }
+  
+
+  #my{
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  }
+
+
+  /* */
+
+  
+      /*     for animatee image Third*/
+      .image-slider-container-Third {
+        position: relative;
+        width: 100%; /* Container takes full width */
+        height: 200px; /* Adjust to image height */
+        overflow: hidden; /* Hide overflow */
+        margin-top: 3rem;
+        height: 500px;
+      }
+      
+      .image-slider-Third {
+        display: flex; /* Display images in a row */
+        position: absolute;
+        width: calc(400px * 5); /* (Image width * number of images) */
+        animation: moveSliderThird 30s linear infinite; /* Move left to right */
+        padding-right: 5px;
+        gap: 2rem;
+      }
+      
+      .image-slider-Third img {
+        width: 500px; /* Adjust to your image width */
+        height: 300px; /* Adjust to your image height */
+      }
+      
+      /* Keyframes for sliding animation */
+      @keyframes moveSliderThird {
+        0% {
+          transform: translateX(-60%); /* Start off-screen left */
+        }
+        100% {
+          transform: translateX(60%); /* End off-screen right */
+        }
+      }
+      
+
+
+
+
+
+      
+
+      /*  responsive*/
+      /* Styles for small screens */
+@media (max-width: 600px) {
+      .image-slider img {
+        width: 220px; /* Adjust to your image width */
+        height: 160px; /* Adjust to your image height */
+      }
+      .image-slider-Second img {
+        width: 220px; /* Adjust to your image width */
+        height: 160px; /* Adjust to your image height */
+      }
+      .image-slider-Third img {
+        width: 200px; /* Adjust to your image width */
+        height: 160px; /* Adjust to your image height */
+      }
+      
+    
+    }
+
+
+
+    #icon-container {
+     
+      
+    }
+
+    #trembling-icon {
+       /* Adjust the icon size */
+       /* Adjust icon color */
+      animation: tremble 0.7s infinite; /* Apply animation */
+    }
+    
+    /* Keyframes for trembling effect */
+    @keyframes tremble {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(1px, 1px); }
+      50% { transform: translate(-1px, -1px); }
+      75% { transform: translate(1px, -1px); }
+      100% { transform: translate(-1px, 1px); }
+    }
