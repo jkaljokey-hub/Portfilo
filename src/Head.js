@@ -15,10 +15,10 @@ const Head = () => {
 
         {/* Name */}
         <div className="text-center md:text-left mb-4 md:mb-0">
-          <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
+          <h1 className="text-white text-xl sm:text-2xl md:text-3xl p-1 lg:text-4xl font-semibold">
             Abubakar Alnour
           </h1>
-          <p className="text-gray-300 mt-1 text-sm sm:text-base">Cloud Administrator</p>
+          <p className="text-gray-300 mt-1 text-sm sm:text-base">Hybrid Cloud Administrator</p>
         </div>
 
         {/* Social Icons */}
@@ -46,7 +46,7 @@ const Head = () => {
             <img src="gmail.png" alt="Email" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
           <a
-            href="https://wa.me/0539903165"
+            href="https://wa.me/0502263231"
             target="_blank"
             rel="noreferrer"
             className="hover:scale-110 transition-transform"
