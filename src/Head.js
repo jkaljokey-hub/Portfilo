@@ -46,7 +46,7 @@ const Head = () => {
             <img src="gmail.png" alt="Email" className="h-8 w-8 md:h-12 md:w-12" />
           </a>
           <a
-            href="https://wa.me/0502263231"
+          href="https://wa.me/966502263231"
             target="_blank"
             rel="noreferrer"
             className="hover:scale-110 transition-transform"
