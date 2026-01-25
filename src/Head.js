@@ -59,7 +59,7 @@ const Head = () => {
       {/* Greeting */}
       <div className="mt-6 text-center text-gray-300">
         <h2 className="text-lg sm:text-xl md:text-2xl animate-pulse">
-          Hello, how it's going? <span className="dots">•••</span>
+          Hello, how it's going? <span className="dots"></span>
         </h2>
       </div>
 
